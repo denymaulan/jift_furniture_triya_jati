@@ -2,54 +2,63 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TRIYA JATI</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #e0f2f1;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #f5faff; }
     header {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1280&q=80') no-repeat center center/cover;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
       color: white;
       text-align: center;
       padding: 60px 20px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
+    section { padding: 20px; max-width: 1000px; margin: auto; }
+    h1 { margin: 0; font-size: 3em; }
+    h2 { color: #0077cc; }
+    .carousel-container {
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
     }
-    header p {
-      font-size: 1.2em;
+    .carousel-slide {
+      display: inline-block;
+      width: 250px;
+      margin: 10px;
+      scroll-snap-align: center;
+      vertical-align: top;
     }
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
+    .carousel-slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-    h2 {
-      color: #004d40;
-    }
-    a {
-      text-decoration: none;
-      color: #00695c;
-    }
-    .contact a {
-      display: flex;
-      align-items: center;
-      margin: 8px 0;
-    }
-    .contact img {
-      width: 20px;
-      margin-right: 10px;
-    }
-    footer {
+    .order-button {
+      display: block;
       text-align: center;
-      padding: 10px;
-      background-color: #b2dfdb;
-      color: #004d40;
+      margin-top: 8px;
+      padding: 8px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
+    .contact-buttons a {
+      display: inline-flex;
+      align-items: center;
+      margin: 8px 10px 0 0;
+      padding: 10px 15px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .contact-buttons a img { width: 20px; margin-right: 8px; }
+    .map-link { margin-top: 10px; display: block; }
   </style>
 </head>
 <body>
@@ -59,23 +68,50 @@
   </header>
 
   <section>
-    <h2>Tentang TRIYA JATI</h2>
-    <p>
-      TRIYA JATI adalah usaha mebel yang telah berdiri lebih dari 20 tahun, menghadirkan produk berkualitas seperti tempat tidur dengan desain yang elegan dan berkelas. Dibuat menggunakan kayu jati asli, setiap produk kami dirancang secara detail dan dikenal luas karena keindahan serta kekuatannya. TRIYA JATI siap menjadi mitra terpercaya dalam memenuhi kebutuhan furnitur Anda, baik untuk penggunaan pribadi maupun skala usaha.
-    </p>
+    <h2>Tentang Kami</h2>
+    <p>TRIYA JATI adalah usaha mebel yang telah berdiri lebih dari 20 tahun, menghadirkan produk berkualitas seperti tempat tidur dengan desain elegan dan berkelas. Dibuat menggunakan kayu pilihan seperti mahoni, produk kami dirancang detail dan dikenal luas karena kekuatannya.</p>
   </section>
 
-  <section class="contact">
-    <h2>Hubungi Kami</h2>
-    <a href="https://wa.me/6285866338431"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">0858-6633-8431</a>
-    <a href="https://wa.me/6281325042662"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">0813-2504-2662</a>
-    <p>
-      Atau kunjungi lokasi kami di: <a href="https://maps.app.goo.gl/9aWnuSAU8YUA9Fg4A">Google Maps Lokasi</a>
-    </p>
-  </section>
-
-  <footer>
-    © 2025 TRIYA JATI. All rights reserved.
-  </footer>
-</body>
-</html>
+  <section>
+    <h2>Koleksi Produk</h2>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+      <img src="images/image_1.png" alt="Produk 1">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%201.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_1.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_2.png" alt="Produk 2">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%202.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_2.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_3.png" alt="Produk 3">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%203.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_3.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_4.png" alt="Produk 4">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%204.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_4.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_5.png" alt="Produk 5">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%205.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_5.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_6.png" alt="Produk 6">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%206.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_6.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_7.png" alt="Produk 7">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%207.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_7.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_8.png" alt="Produk 8">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%208.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_8.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_9.png" alt="Produk 9">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%209.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_9.png" target="_blank">Pesan Sekarang</a>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/image_10.png" alt="Produk 10">
+      <a class="order-button" href="https://wa.me/6285866338431?text=Halo,%20saya%20tertarik%20memesan%20produk%20nomor%2010.%20Berikut%20link%20gambarnya:%20https://raw.githubusercontent.com/denimaulanajpr/triyajati/main/images/image_10.png" target="_blank">Pesan Sekarang</a>
+    </div>
