@@ -15,12 +15,35 @@
       margin-top: 10px;
     }
     .logo {
-      width: 100px;
+      width: 50px;
       height: auto;
       position: absolute;
       top: 20px;
       left: 20px;
       z-index: 999;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 10px 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+    .header-text {
+      margin-top: 120px; /* biar teks ga ketiban navbar */
+      text-align: center;
+      color: white;
     }
     body { font-family: Arial, sans-serif; margin: 0; background-color: #f5faff; }
     header {
@@ -79,21 +102,22 @@
   </style>
 </head>
 <body>
+  <!-- ✅ HEADER + LOGO + NAVBAR -->
   <header>
-  <!-- ✅ NAVBAR LOGO + MENU -->
-  <div class="navbar">
-    <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
-    <nav>
-      <a href="#">Beranda</a>
-      <a href="#">Produk</a>
-      <a href="#">Tentang</a>
-      <a href="#">Kontak</a>
-    </nav>
-  </div>
+    <div class="navbar">
+      <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
+      <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Produk</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+      </nav>
+    </div>
 
-  <!-- ✅ TETAP PERTAHANKAN BAGIAN INI -->
-    <h1>JIFT</h1>
-    <p>Spesialis Furniture Ruangan Berkualitas Tinggi</p>
+    <div class="header-text">
+      <h1>JIFT</h1>
+      <p>Spesialis Furniture Ruangan Berkualitas Tinggi</p>
+    </div>
   </header>
 
   <section>
