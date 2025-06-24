@@ -12,9 +12,9 @@
     }
     body {
       margin: 0;
-      padding-top: 80px; /* supaya isi web gak ketiban navbar */
+      padding-top: 120px; /* naikkan jadi 120px biar header nggak ketiban */
       font-family: Arial, sans-serif;
-      background-color: #f0f8ff; /* ini opsional ya, biar adem */
+      background-color: #f0f8ff;
     }
     header {
       background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
@@ -36,8 +36,9 @@
     .navbar {
       position: fixed;
       top: 0;
+      left: 0; /* ⬅️ Tambahin ini biar navbar nempel kiri */
       width: 100%;
-      background-color: rgba(135, 206, 250, 0.80); /* Sky blue dengan transparansi 80% */
+      background-color: rgba(135, 206, 250, 0.85); /* sky blue semi transparan */
       padding: 10px 20px;
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -56,7 +57,7 @@
       font-weight: bold;
     }
     .header-text {
-      margin-top: 120px; /* biar teks ga ketiban navbar */
+      margin-top: 0;
       text-align: center;
       color: white;
     }
@@ -111,20 +112,20 @@
 <body>
   <!-- ✅ HEADER + LOGO + NAVBAR -->
   <header>
-    <div class="navbar">
-      <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
-      <nav>
-        <a href="#">Customize</a>
-        <a href="#">Triya</a>
-        <a href="#">Capital</a>
-        <a href="#">JIFT</a>
-      </nav>
-    </div>
+  <div class="navbar">
+    <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
+    <nav>
+      <a href="#">Customize</a>
+      <a href="#">Triya</a>
+      <a href="#">Capital</a>
+      <a href="#">JIFT</a>
+    </nav>
+  </div>
 
-    <div class="header">
-      <h1>JIFT</h1>
-      <p>Spesialis Furniture Ruangan Berkualitas Tinggi</p>
-    </div>
+  <div class="header-text">
+    <h1>JIFT</h1>
+    <p>Spesialis Furniture Ruangan Berkualitas Tinggi</p>
+  </div>
   </header>
 
   <section>
