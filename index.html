@@ -39,8 +39,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      opacity: 0;
-      transition: left 1s ease;
+      opacity: 0,5s ease;
+      transition: left 0,5s ease;
       z-index: 2000;
     }
     .drawer a {
@@ -194,13 +194,19 @@
 </head>
 <body>
   <script>
-  function openDrawer() {
-    document.getElementById('drawerMenu').classList.add('open');
-    document.querySelector('.drawer-overlay').classList.add('active');
+    function openDrawer() {
+     const drawer = 
+  document.getElementById('drawerMenu')
+     const overlay =
+  document.querySelector('.drawer-overlay')
+    drawer.classList.add('open');
+    overlay.classList.add('active');
   }
   function closeDrawer() {
-  const drawer = document.getElementById('drawerMenu');
-  const overlay = document.querySelector('.drawer-overlay');
+    const drawer = 
+document.getElementById('drawerMenu');
+    const overlay = 
+document.querySelector('.drawer-overlay');
 
     drawer.classList.remove('open');
 
@@ -211,10 +217,10 @@
     }
   </script>
   <!-- ✅ HEADER + LOGO + NAVBAR + Drawer -->
-  <header>
+  <header id="#">
   <!-- ✅ Navbar di bagian atas -->
   <div class="navbar">
-    <a href="beranda">
+    <a href="#">
   <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
     </a>
     <button class="drawer-button" onclick="openDrawer()">☰</button>
@@ -224,7 +230,7 @@
   <div class="drawer-overlay" onclick="closeDrawer()"></div>
   <div class="drawer" id="drawerMenu">
     <button class="drawer-close" onclick="closeDrawer()">✕</button>
-    <a href="#beranda">Beranda</a>
+    <a href="#">Beranda</a>
     <a href="#produk">Produk</a>
     <a href="#tentang">Tentang</a>
     <a href="#kontak">Kontak</a>
