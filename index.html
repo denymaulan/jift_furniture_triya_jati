@@ -29,7 +29,7 @@
       left: -250px;
       width: 250px;
       height: 100%;
-      background-color: #007BFF;
+      background-color: #4da6ff;
       color: white;
       box-shadow: -2px 0 6px rgba(0,0,0,0.2);
       padding: 20px;
@@ -39,6 +39,12 @@
       opacity: 0;
       transition: left 1s ease;
       z-index: 2000;
+    }
+    .drawer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
     }
     /* Drawer aktif */
     .drawer.open {
@@ -190,9 +196,16 @@
     document.querySelector('.drawer-overlay').classList.add('active');
   }
   function closeDrawer() {
-    document.getElementById('drawerMenu').classList.remove('open');
-    document.querySelector('.drawer-overlay').classList.remove('active');
-  }
+  const drawer = document.getElementById('drawerMenu');
+  const overlay = document.querySelector('.drawer-overlay');
+
+    drawer.classList.remove('open');
+
+      // Tambahkan delay agar transisi keluar bisa kelihatan
+      setTimeout(() => {
+      overlay.classList.remove('active');
+      }, 300); // 300ms = 0.3 detik, sesuaikan dengan transition CSS
+    }
   </script>
   <!-- ✅ HEADER + LOGO + NAVBAR -->
   <header>
