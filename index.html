@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JIFT</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -211,7 +214,7 @@
   <header>
   <!-- ✅ Navbar di bagian atas -->
   <div class="navbar">
-    <a href="#">
+    <a href="beranda">
   <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
     </a>
     <button class="drawer-button" onclick="openDrawer()">☰</button>
@@ -221,7 +224,7 @@
   <div class="drawer-overlay" onclick="closeDrawer()"></div>
   <div class="drawer" id="drawerMenu">
     <button class="drawer-close" onclick="closeDrawer()">✕</button>
-    <a href="#">Beranda</a>
+    <a href="#beranda">Beranda</a>
     <a href="#produk">Produk</a>
     <a href="#tentang">Tentang</a>
     <a href="#kontak">Kontak</a>
@@ -233,7 +236,7 @@
   </div>
   </header>
 
-  <section>
+  <section id="produk">
   <h2>Top Koleksi Furniture 1-1</h2>
   <div class="carousel-container">
   <div class="carousel-slide">
@@ -605,12 +608,12 @@
   </div> <!-- Penutup carousel-container -->
   </section>
 
-  <section>
+  <section id="tentang">
     <h4>Tentang Kami</h4>
     <p>JIFT adalah Produksi Furniture yang telah berdiri lebih dari 1 tahun, menghadirkan produk berkualitas seperti furniture dengan desain elegan dan berkelas, bisa custom bergaya dan berdesain bebas. Dibuat menggunakan kayu Jati asli, produk kami dirancang detail dan dikenal luas karena kekuatannya.</p>
   </section>
   
-  <section>
+  <section id="kontak">
     <h4>Sosial/Kritik & Saran</h4>
     <div class="contact-buttons">
       <a href="https://wa.me/6285866338431" target="_blank">
