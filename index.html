@@ -20,7 +20,7 @@
       border: none;
       cursor: pointer;
       z-index: 2001;
-      display: none;
+      display: none; /* awalnya disembunyikan, nanti muncul di mobile */
     }
     /* Drawer menu (geser dari kanan) */
     .drawer {
@@ -65,13 +65,21 @@
       border: none;
       cursor: pointer;
     }
-    /* Tampilkan tombol ☰ di layar kecil */
+    /* ✅ Tampilan HP (max-width: 768px) */
     @media (max-width: 768px) {
-    .drawer-button {
-    display: block;
-    }
+      .drawer-button {
+        display: block; /* tombol ☰ muncul di HP */
+      }
       .navbar nav {
-        display: none; /* sembunyikan menu di navbar */
+        display: none; /* sembunyikan menu nav biasa di HP */
+      }
+    }
+    /* ✅ Tampilan Desktop (min-width: 769px) */
+    @media (min-width: 769px) {
+      .navbar nav {
+        display: flex; /* munculin lagi menu nav di desktop */
+        gap: 20px;
+        align-items: center;
       }
     }
     body {
