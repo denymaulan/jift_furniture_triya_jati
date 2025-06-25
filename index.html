@@ -39,7 +39,6 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      opacity: 0,5s ease;
       transition: left 0,5s ease;
       z-index: 2000;
     }
@@ -52,7 +51,6 @@
     /* Drawer aktif */
     .drawer.open {
       left: 0;
-      opacity: 1;
     }
     /* Overlay gelap */
     .drawer-overlay {
@@ -76,6 +74,7 @@
       background: none;
       border: none;
       cursor: pointer;
+      color: white;
     }
     /* ✅ Tampilan HP (max-width: 768px) */
     @media (max-width: 768px) {
@@ -230,6 +229,9 @@ document.querySelector('.drawer-overlay');
   <div class="drawer-overlay" onclick="closeDrawer()"></div>
   <div class="drawer" id="drawerMenu">
     <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    <a href="#">
+      <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
+    </a>
     <a href="#">Beranda</a>
     <a href="#produk">Produk</a>
     <a href="#tentang">Tentang</a>
