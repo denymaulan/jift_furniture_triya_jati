@@ -13,6 +13,11 @@
       padding: 0;
       box-sizing: border-box;
     }
+    .drawer-logo {
+      width: 50px;
+      height: auto;
+      margin-bottom: 20px;
+    }
     /* Tombol ☰ */
     .drawer-button {
       position: fixed;
@@ -25,6 +30,17 @@
       z-index: 2001;
       display: none; /* awalnya disembunyikan, nanti muncul di mobile */
     }
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+    .drawer links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: left;
     /* Drawer menu (geser dari kanan) */
     .drawer {
       position: fixed;
@@ -35,9 +51,11 @@
       background-color: #4da6ff;
       color: white;
       box-shadow: -2px 0 6px rgba(0,0,0,0.2);
-      padding: 20px;
+      padding-top: 20px;
+      padding-left: 20px;
       display: flex;
       flex-direction: column;
+      align-item: flex-start;
       gap: 20px;
       transition: left 0.5s ease;
       z-index: 2000;
@@ -227,14 +245,16 @@ document.querySelector('.drawer-overlay');
   <!-- ✅ Drawer menu di luar navbar (biasanya langsung setelah header) -->
   <div class="drawer-overlay" onclick="closeDrawer()"></div>
   <div class="drawer" id="drawerMenu">
-    <button class="drawer-close" onclick="closeDrawer()">✕</button>
     <a href="#">
-      <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
+      <img src="image/logo_triyajati.png" alt="Logo JIFT" class="drawer-logo">
     </a>
-    <a href="#">Beranda</a>
-    <a href="#produk">Produk</a>
-    <a href="#tentang">Tentang</a>
-    <a href="#kontak">Kontak</a>
+    <div class="drawer-link">
+     <a href="#">Beranda</a>
+     <a href="#produk">Produk</a>
+     <a href="#tentang">Tentang</a>
+     <a href="#kontak">Kontak</a>
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
   </div>
 
   <div class="header-text">
