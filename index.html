@@ -36,11 +36,13 @@
       gap: 15px;
       width: 100%;
     }
-    .drawer links a {
+    .drawer-links a {
       color: white;
       text-decoration: none;
       font-size: 18px;
+      font-weight: bold;
       text-align: left;
+    }
     /* Drawer menu (geser dari kanan) */
     .drawer {
       position: fixed;
@@ -55,7 +57,7 @@
       padding-left: 20px;
       display: flex;
       flex-direction: column;
-      align-item: flex-start;
+      align-items: flex-start;
       gap: 20px;
       transition: left 0.5s ease;
       z-index: 2000;
@@ -248,7 +250,7 @@ document.querySelector('.drawer-overlay');
     <a href="#">
       <img src="image/logo_triyajati.png" alt="Logo JIFT" class="drawer-logo">
     </a>
-    <div class="drawer-link">
+    <div class="drawer-links">
      <a href="#">Beranda</a>
      <a href="#produk">Produk</a>
      <a href="#tentang">Tentang</a>
