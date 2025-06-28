@@ -159,6 +159,16 @@
       color: #000;
       font-weight: bold;
     }
+    .lang-switcher {
+      display: flex;
+      gap: 10px;
+    }
+    .lang-switcher button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
     .header-text {
       margin-top: 0;
       text-align: center;
@@ -214,25 +224,63 @@
 </head>
 <body>
   <script>
-    function openDrawer() {
-     const drawer = 
-  document.getElementById('drawerMenu')
-     const overlay =
-  document.querySelector('.drawer-overlay')
+  // Fungsi membuka drawer
+  function openDrawer() {
+    const drawer = document.getElementById('drawerMenu');
+    const overlay = document.querySelector('.drawer-overlay');
     drawer.classList.add('open');
     overlay.classList.add('active');
   }
+  // Fungsi menutup drawer
   function closeDrawer() {
-    const drawer = 
-document.getElementById('drawerMenu');
-    const overlay = 
-document.querySelector('.drawer-overlay');
+    const drawer = document.getElementById('drawerMenu');
+    const overlay = document.querySelector('.drawer-overlay');
     drawer.classList.remove('open');
-      // Tambahkan delay agar transisi keluar bisa kelihatan
-      setTimeout(() => {
+    setTimeout(() => {
       overlay.classList.remove('active');
-      }, 500);
+    }, 500);
+  }
+  // Terjemahan multi bahasa
+  const translations = {
+    id: {
+      beranda: "Beranda",
+      produk: "Produk",
+      tentang: "Tentang",
+      kontak: "Kontak",
+      headerText: "Spesialis Furniture Ruangan Berkualitas Tinggi",
+      section1: "Top Koleksi Furniture 1-1",
+      section2: "Koleksi Interior Isi Ruangan 1-1",
+      section3: "Koleksi Furniture Meja 1-14",
+      section4: "Koleksi Furniture Kursi 1-6",
+      section5: "Koleksi Furniture Sofa 1-39"
+    },
+    en: {
+      beranda: "Home",
+      produk: "Products",
+      tentang: "About",
+      kontak: "Contact",
+      headerText: "High Quality Room Furniture Specialist",
+      section1: "Top Furniture Collection 1-1",
+      section2: "Interior Collection 1-1",
+      section3: "Table Collection 1-14",
+      section4: "Chair Collection 1-6",
+      section5: "Sofa Collection 1-39"
     }
+  };
+  // Fungsi mengganti bahasa
+  function setLanguage(lang) {
+    document.querySelectorAll('.drawer-links a')[0].textContent = translations[lang].beranda;
+    document.querySelectorAll('.drawer-links a')[1].textContent = translations[lang].produk;
+    document.querySelectorAll('.drawer-links a')[2].textContent = translations[lang].tentang;
+    document.querySelectorAll('.drawer-links a')[3].textContent = translations[lang].kontak;
+
+    document.querySelector('.header-text p').textContent = translations[lang].headerText;
+    document.querySelectorAll('section h2')[0].textContent = translations[lang].section1;
+    document.querySelectorAll('section h2')[1].textContent = translations[lang].section2;
+    document.querySelectorAll('section h2')[2].textContent = translations[lang].section3;
+    document.querySelectorAll('section h2')[3].textContent = translations[lang].section4;
+    document.querySelectorAll('section h2')[4].textContent = translations[lang].section5;
+  }
   </script>
   <!-- ✅ HEADER + LOGO + NAVBAR + Drawer -->
   <header id="#">
@@ -241,6 +289,10 @@ document.querySelector('.drawer-overlay');
     <a href="#">
   <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
     </a>
+    <div class="lang-switcher">
+      <button onclick="setLanguage('id')">🇮🇩</button>
+      <button onclick="setLanguage('en')">🇬🇧</button>
+    </div>
     <button class="drawer-button" onclick="openDrawer()">☰</button>
   </div>
 
