@@ -289,9 +289,12 @@
     <a href="#">
   <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
     </a>
-    <div class="lang-switcher">
-      <button onclick="setLanguage('id')">🇮🇩</button>
-      <button onclick="setLanguage('en')">🇬🇧</button>
+    <!-- Tombol Ganti Bahasa (taruh di navbar) -->
+    <div style="margin-left: auto;">
+      <select onchange="setLanguage(this.value)">
+        <option value="id">🇮🇩 ID</option>
+        <option value="en">🇺🇸 EN</option>
+      </select>
     </div>
     <button class="drawer-button" onclick="openDrawer()">☰</button>
   </div>
