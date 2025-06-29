@@ -20,9 +20,7 @@
     }
     /* Tombol ☰ */
     .drawer-button {
-      position: fixed;
-      top: 15px;
-      right: 20px;
+      position: static; /* sebelumnya: fixed */
       font-size: 26px;
       background: none;
       border: none;
@@ -162,7 +160,7 @@
     .navbar-right {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
     }
     .lang-switcher {
       display: flex;
@@ -296,7 +294,6 @@
   <a href="#">
     <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
   </a>
-
   <div class="navbar-right">
     <div class="lang-switcher">
       <button onclick="setLanguage('id')">🇮🇩</button>
