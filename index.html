@@ -159,6 +159,17 @@
       color: #000;
       font-weight: bold;
     }
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* jarak antara tombol bahasa dan drawer */
+    }
+    .lang-switcher button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
     .lang-switcher {
       display: flex;
       gap: 10px;
@@ -286,17 +297,17 @@
   <header id="#">
   <!-- ✅ Navbar di bagian atas -->
   <div class="navbar">
-    <a href="#">
-  <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
-    </a>
-    <!-- Tombol Ganti Bahasa (taruh di navbar) -->
-    <div style="margin-left: auto;">
-      <select onchange="setLanguage(this.value)">
-        <option value="id">🇮🇩 ID</option>
-        <option value="en">🇺🇸 EN</option>
-      </select>
+  <a href="#">
+    <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
+  </a>
+
+  <div class="navbar-right">
+    <div class="lang-switcher">
+      <button onclick="setLanguage('id')">🇮🇩</button>
+      <button onclick="setLanguage('en')">🇬🇧</button>
     </div>
     <button class="drawer-button" onclick="openDrawer()">☰</button>
+  </div>
   </div>
 
   <!-- ✅ Drawer menu di luar navbar (biasanya langsung setelah header) -->
