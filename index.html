@@ -323,6 +323,7 @@
   // Terjemahan multi bahasa
   const translations = {
   id: {
+    pilihBahasa: "Pilih bahasa", 
     beranda: "Beranda",
     produk: "Produk",
     tentang: "Tentang",
@@ -347,6 +348,7 @@
     copyright: "© 2025 TRIYA JATI. All rights reserved."
     },
   en: {
+    pilihBahasa: "Choose language",
     beranda: "Home",
     produk: "Products",
     tentang: "About",
@@ -381,6 +383,7 @@
 
   // Header
   document.querySelector('.header-text p').textContent = translations[lang].headerText;
+  document.querySelector('.language-content h3').textContent = translations[lang].pilihBahasa;
 
   // Section titles
   document.querySelectorAll('section h2')[0].textContent = translations[lang].section1;
