@@ -361,24 +361,29 @@
   <!-- ✅ HEADER + LOGO + NAVBAR + Drawer -->
   <header id="#">
   <!-- ✅ Navbar di bagian atas -->
+  <!-- ✅ Navbar -->
   <div class="navbar">
-  <a href="#">
-    <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
-  </a>
-  <div class="navbar-right">
-    <!-- 🔘 Tombol Bahasa di Navbar -->
-    <div class="language-toggle" onclick="toggleLanguageModal()">
-      <img src="image/flag_id.png" alt="Bahasa" />
-    </div>
+    <a href="#">
+      <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
+    </a>
+    <div class="navbar-right">
+      <!-- 🔘 Tombol Bahasa -->
+      <div class="language-toggle" onclick="toggleLanguageModal()">
+        <img src="image/flag_id.png" alt="Bahasa" />
+      </div>
 
-    <!-- 🌐 Modal Pilihan Bahasa -->
-    <div id="languageModal" class="language-modal">
-      <div class="language-content">
-        <h3>Pilih Bahasa</h3>
-        <div class="language-options">
-          <button onclick="setLanguage('id'); closeLanguageModal()">🇮🇩 Indonesia</button>
-          <button onclick="setLanguage('en'); closeLanguageModal()">🇬🇧 English</button>
-        </div>
+      <!-- ☰ Drawer Button -->
+      <button class="drawer-button" onclick="openDrawer()">☰</button>
+    </div>
+  </div>
+
+  <!-- 🌐 Modal Bahasa DILETAKKAN DI LUAR NAVBAR -->
+  <div id="languageModal" class="language-modal">
+    <div class="language-content">
+      <h3>Pilih Bahasa</h3>
+      <div class="language-options">
+        <button onclick="setLanguage('id'); closeLanguageModal()">🇮🇩 Indonesia</button>
+        <button onclick="setLanguage('en'); closeLanguageModal()">🇬🇧 English</button>
       </div>
     </div>
   </div>
