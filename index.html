@@ -322,45 +322,101 @@
   }
   // Terjemahan multi bahasa
   const translations = {
-    id: {
-      beranda: "Beranda",
-      produk: "Produk",
-      tentang: "Tentang",
-      kontak: "Kontak",
-      headerText: "Spesialis Furniture Ruangan Berkualitas Tinggi",
-      section1: "Top Koleksi Furniture 1-1",
-      section2: "Koleksi Interior Isi Ruangan 1-1",
-      section3: "Koleksi Furniture Meja 1-14",
-      section4: "Koleksi Furniture Kursi 1-6",
-      section5: "Koleksi Furniture Sofa 1-39"
+  id: {
+    beranda: "Beranda",
+    produk: "Produk",
+    tentang: "Tentang",
+    kontak: "Kontak",
+    headerText: "Spesialis Furniture Ruangan Berkualitas Tinggi",
+    section1: "Top Koleksi Furniture 1-1",
+    section2: "Koleksi Interior Isi Ruangan 1-1",
+    section3: "Koleksi Furniture Meja 1-14",
+    section4: "Koleksi Furniture Kursi 1-6",
+    section5: "Koleksi Furniture Sofa 1-39",
+    section6: "Koleksi Furniture Tempat Tidur 1-8",
+    section7: "Koleksi Furniture Sideboard 1-4",
+    section8: "Koleksi 1 Set Furniture",
+    section9: "Koleksi Furniture Luxury",
+    section10: "Koleksi Mebel Mentahan 1-4",
+    comingSoon: "Segera Hadir",
+    aboutTitle: "Tentang Kami",
+    aboutText: "JIFT adalah Produksi Furniture yang telah berdiri lebih dari 1 tahun, menghadirkan produk berkualitas seperti furniture dengan desain elegan dan berkelas, bisa custom bergaya dan berdesain bebas. Dibuat menggunakan kayu Jati asli, produk kami dirancang detail dan dikenal luas karena kekuatannya.",
+    contactTitle: "Sosial/Kritik & Saran",
+    pesanSekarang: "Pesan Sekarang",
+    lihatMaps: "Lihat lokasi di Google Maps",
+    copyright: "© 2025 TRIYA JATI. All rights reserved."
     },
-    en: {
-      beranda: "Home",
-      produk: "Products",
-      tentang: "About",
-      kontak: "Contact",
-      headerText: "High Quality Room Furniture Specialist",
-      section1: "Top Furniture Collection 1-1",
-      section2: "Interior Collection 1-1",
-      section3: "Table Collection 1-14",
-      section4: "Chair Collection 1-6",
-      section5: "Sofa Collection 1-39"
+  en: {
+    beranda: "Home",
+    produk: "Products",
+    tentang: "About",
+    kontak: "Contact",
+    headerText: "High Quality Room Furniture Specialist",
+    section1: "Top Furniture Collection 1-1",
+    section2: "Interior Collection 1-1",
+    section3: "Table Collection 1-14",
+    section4: "Chair Collection 1-6",
+    section5: "Sofa Collection 1-39",
+    section6: "Bedroom Furniture Collection 1-8",
+    section7: "Sideboard Furniture Collection 1-4",
+    section8: "1 Set Furniture Collection",
+    section9: "Luxury Furniture Collection",
+    section10: "Raw Furniture Collection 1-4",
+    comingSoon: "Coming Soon",
+    aboutTitle: "About Us",
+    aboutText: "JIFT is a furniture production company that has been established for over 1 year, offering high-quality products with elegant and classy designs. Custom designs and styles are available. Made from real teak wood, our products are finely crafted and widely recognized for their durability.",
+    contactTitle: "Social/Criticism & Suggestions",
+    pesanSekarang: "Order Now",
+    lihatMaps: "View location on Google Maps",
+    copyright: "© 2025 TRIYA JATI. All rights reserved."
     }
   };
   // Fungsi mengganti bahasa
   function setLanguage(lang) {
-    document.querySelectorAll('.drawer-links a')[0].textContent = translations[lang].beranda;
-    document.querySelectorAll('.drawer-links a')[1].textContent = translations[lang].produk;
-    document.querySelectorAll('.drawer-links a')[2].textContent = translations[lang].tentang;
-    document.querySelectorAll('.drawer-links a')[3].textContent = translations[lang].kontak;
+  // Nav
+  document.querySelectorAll('.drawer-links a')[0].textContent = translations[lang].beranda;
+  document.querySelectorAll('.drawer-links a')[1].textContent = translations[lang].produk;
+  document.querySelectorAll('.drawer-links a')[2].textContent = translations[lang].tentang;
+  document.querySelectorAll('.drawer-links a')[3].textContent = translations[lang].kontak;
 
-    document.querySelector('.header-text p').textContent = translations[lang].headerText;
-    document.querySelectorAll('section h2')[0].textContent = translations[lang].section1;
-    document.querySelectorAll('section h2')[1].textContent = translations[lang].section2;
-    document.querySelectorAll('section h2')[2].textContent = translations[lang].section3;
-    document.querySelectorAll('section h2')[3].textContent = translations[lang].section4;
-    document.querySelectorAll('section h2')[4].textContent = translations[lang].section5;
-  }
+  // Header
+  document.querySelector('.header-text p').textContent = translations[lang].headerText;
+
+  // Section titles
+  document.querySelectorAll('section h2')[0].textContent = translations[lang].section1;
+  document.querySelectorAll('section h2')[1].textContent = translations[lang].section2;
+  document.querySelectorAll('section h2')[2].textContent = translations[lang].section3;
+  document.querySelectorAll('section h2')[3].textContent = translations[lang].section4;
+  document.querySelectorAll('section h2')[4].textContent = translations[lang].section5;
+  document.querySelectorAll('section h2')[5].textContent = translations[lang].section6;
+  document.querySelectorAll('section h2')[6].textContent = translations[lang].section7;
+  document.querySelectorAll('section h2')[7].textContent = translations[lang].section8;
+  document.querySelectorAll('section h2')[8].textContent = translations[lang].section9;
+  document.querySelectorAll('section h2')[9].textContent = translations[lang].section10;
+
+  // Tentang Kami
+  document.querySelector('#tentang h4').textContent = translations[lang].aboutTitle;
+  document.querySelector('#tentang p').textContent = translations[lang].aboutText;
+
+  // Kontak
+  document.querySelector('#kontak h4').textContent = translations[lang].contactTitle;
+  document.querySelector('.map-link').textContent = translations[lang].lihatMaps;
+
+  // Tombol "Pesan Sekarang"
+  document.querySelectorAll('.order-button').forEach(btn => {
+    btn.textContent = translations[lang].pesanSekarang;
+  });
+
+  // Coming Soon section
+  document.querySelectorAll('.carousel-slide h2').forEach(h2 => {
+    if (h2.textContent.includes("Coming Soon") || h2.textContent.includes("Segera Hadir")) {
+      h2.textContent = translations[lang].comingSoon;
+    }
+  });
+
+  // Footer
+  document.querySelector('footer').textContent = translations[lang].copyright;
+}
   function toggleLanguageModal() {
     const modal = document.getElementById('languageModal');
     modal.classList.toggle('active');
