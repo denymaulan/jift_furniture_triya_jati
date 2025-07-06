@@ -162,17 +162,79 @@
       align-items: center;
       gap: 15px;
     }
-    .lang-switcher {
-      display: flex;
-      gap: 5px;
-    }
-    .lang-switcher button {
-      background: none;
-      border: none;
-      font-size: 20px;
+    .language-toggle {
+      position: absolute;
+      top: 15px;
+      right: 60px;
+      z-index: 1001;
       cursor: pointer;
-      padding: 5px;
-      line-height: 1;
+    }
+    .language-toggle img {
+      width: 30px;
+      height: auto;
+    }
+
+    /* 🌐 Modal Bahasa */
+    .language-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 32, 64, 0.7);
+      z-index: 3000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .language-modal.active {
+      display: flex;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .language-content {
+      background-color: #e6f2ff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      min-width: 250px;
+    }
+
+    .language-content h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #003366;
+    }
+
+    .language-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .language-options button {
+      background-color: #ffffff;
+      border: 2px solid #0077cc;
+      color: #003366;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .language-options button:hover {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
     .header-text {
       margin-top: 0;
@@ -286,6 +348,15 @@
     document.querySelectorAll('section h2')[3].textContent = translations[lang].section4;
     document.querySelectorAll('section h2')[4].textContent = translations[lang].section5;
   }
+  function toggleLanguageModal() {
+    const modal = document.getElementById('languageModal');
+    modal.classList.toggle('active');
+  }
+
+  function closeLanguageModal() {
+    const modal = document.getElementById('languageModal');
+    modal.classList.remove('active');
+  }
   </script>
   <!-- ✅ HEADER + LOGO + NAVBAR + Drawer -->
   <header id="#">
@@ -295,12 +366,21 @@
     <img src="image/logo_triyajati.png" alt="Logo Triya Jati" class="logo">
   </a>
   <div class="navbar-right">
-    <div class="lang-switcher">
-      <button onclick="setLanguage('id')">🇮🇩</button>
-      <button onclick="setLanguage('en')">🇬🇧</button>
+    <!-- 🔘 Tombol Bahasa di Navbar -->
+    <div class="language-toggle" onclick="toggleLanguageModal()">
+      <img src="image/flag_id.png" alt="Bahasa" />
     </div>
-    <button class="drawer-button" onclick="openDrawer()">☰</button>
-  </div>
+
+    <!-- 🌐 Modal Pilihan Bahasa -->
+    <div id="languageModal" class="language-modal">
+      <div class="language-content">
+        <h3>Pilih Bahasa</h3>
+        <div class="language-options">
+          <button onclick="setLanguage('id'); closeLanguageModal()">🇮🇩 Indonesia</button>
+          <button onclick="setLanguage('en'); closeLanguageModal()">🇬🇧 English</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ✅ Drawer menu di luar navbar (biasanya langsung setelah header) -->
