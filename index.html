@@ -190,7 +190,6 @@
 
     .language-modal.active {
       display: flex;
-      animation: fadeIn 0.3s ease-in-out;
     }
 
     .language-content {
@@ -378,7 +377,9 @@
   </div>
 
   <!-- 🌐 Modal Bahasa DILETAKKAN DI LUAR NAVBAR -->
-  <div id="languageModal" class="language-modal">
+  <div id="languageModal" 
+    class="language-modal"
+    onclick="closeLanguageModal()">
     <div class="language-content">
       <h3>Pilih Bahasa</h3>
       <div class="language-options">
